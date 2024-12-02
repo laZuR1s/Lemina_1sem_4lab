@@ -129,11 +129,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Container.cpp" />
     <ClCompile Include="Lemina_1sem_4lab.cpp" />
     <ClCompile Include="LinearList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h" />
+    <ClInclude Include="Container.h" />
     <ClInclude Include="LinearList.h" />
   </ItemGroup>
   <ItemGroup>

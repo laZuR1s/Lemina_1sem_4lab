@@ -43,9 +43,9 @@ void Client::printClientData(std::ostream& stream)
 	stream << fullName << '\n';
 	stream << contractDate.day() << ' ';
 	stream << contractDate.month() << ' ';
-	stream << contractDate.year() << ' ';
+	stream << contractDate.year() << '\n';
 	stream << tariffName << '\n';
 	stream << balance << '\n';
-	stream << region << '\n\n';
+	stream << region << '\n';
 
 }

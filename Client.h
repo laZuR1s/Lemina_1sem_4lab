@@ -2,6 +2,7 @@
 #include<iostream>
 #include<string>
 #include <chrono>
+#include <Windows.h>
 #include<fstream>
 
 class Client
