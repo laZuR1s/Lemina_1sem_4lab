@@ -21,17 +21,17 @@ public:
     void remove_from_end();
     void remove_at_position(size_t position);
 
-    Client* find_by_index(int index);
+    Client find_by_index(int index);
 
     void clear();
 
-    void get_employees_younger_than(int year, int min_experience);
-    void get_by_department_and_remove(int department_code);
-    void sort_employees();
+    void get_specific_client(std::string combination, std::string tariff,std::string region,std::ostream& stream);
+    void get_another_specific_client_and_remove(std::string tariff, std::chrono::year_month_day& contractDate,std::ostream& stream);
+    void sort_clients();
+
 
     size_t get_list_size() { return list->get_size(); };
     bool is_empty() { return list->is_empty(); };
 
-    void print_all(std::ostream stream);
-    friend std::ostream& operator<<(std::ostream& os, const Container& container);
+    void print_all(std::ostream &stream);
 };

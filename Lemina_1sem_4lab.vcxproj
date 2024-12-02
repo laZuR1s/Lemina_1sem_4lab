@@ -140,6 +140,8 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="data.txt" />
+    <Text Include="data1.txt" />
+    <Text Include="data2.txt" />
     <Text Include="out_file.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

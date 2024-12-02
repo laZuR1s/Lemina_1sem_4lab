@@ -21,6 +21,13 @@ public:
 	void fillClientData(std::istream& stream);
 	void printClientData(std::ostream& stream);
 
+	std::string get_phoneNumber();
+	std::string get_tariffName();
+	std::string get_region();
+	std::chrono::year_month_day get_contractDate();
+	double get_balance();
+	std::string get_fullName();
+
 
 
 };

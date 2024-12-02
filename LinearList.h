@@ -14,7 +14,7 @@ public:
     void remove_from_start();
     void remove_from_end();
     void remove_by_index(int index);
-    Client* find_by_index(int index);
+    Client find_by_index(int index);
     void clear();
     std::vector<Client>& get_all();
     size_t get_size() const;

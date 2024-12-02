@@ -38,11 +38,10 @@ void LinearList::remove_by_index(int index)
 	}
 }
 
-Client* LinearList::find_by_index(int index)
+Client LinearList::find_by_index(int index)
 {
 	if (index >= 0 && index < list.size())
-		return &list[index];
-	return nullptr;
+		return list[index];
 }
 
 void LinearList::clear()

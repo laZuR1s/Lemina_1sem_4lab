@@ -49,3 +49,33 @@ void Client::printClientData(std::ostream& stream)
 	stream << region << '\n';
 
 }
+
+std::string Client::get_phoneNumber()
+{
+	return phoneNumber;
+}
+
+std::string Client::get_tariffName()
+{
+	return tariffName;
+}
+
+std::string Client::get_region()
+{
+	return region;
+}
+
+std::chrono::year_month_day Client::get_contractDate()
+{
+	return contractDate;
+}
+
+double Client::get_balance()
+{
+	return balance;
+}
+
+std::string Client::get_fullName()
+{
+	return fullName;
+}
