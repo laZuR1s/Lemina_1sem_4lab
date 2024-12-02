@@ -13,7 +13,7 @@ void validation(T& x, Predicat condition, const char* message);
 int main()
 {
 	SetConsoleOutputCP(1251);
-	
+
 	Container container;
 	int choice;
 	do
@@ -25,7 +25,7 @@ int main()
 		{
 			int list_choice;
 			do {
-		case 1: {}
+		
 
 			} while (list_choice != 9);
 			break;
