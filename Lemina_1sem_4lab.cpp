@@ -11,6 +11,8 @@ template<typename T, typename Predicat>
 void validation(T& x, Predicat condition, const char* message);
 Client fillData(int input_choice);
 std::chrono::year_month_day inputDate();
+int check_file(std::ifstream& file);
+
 
 int main()
 {
@@ -244,10 +246,25 @@ Client fillData(int input_choice)
 		std::cout << "Введите название файла: ";
 		std::cin >> fileName;
 		std::ifstream file(fileName);
-		client.fillClientData(file);
+		switch (check_file(file))
+		{
+		case -1:
+			std::cout << "Некорректное имя фала\n";
+			break;
+		case 0:
+			std::cout << "Пустой файл\n";
+			break;
+		default:
+			client.fillClientData(file);
+			std::cout << "\nДанные получены\n";
+		}
+		
 	}
 	else
+	{
+		std::cout << "\nВведите данные(Номер телефона/ФИО/Дата заключения контракта/Тариф/Баланс/Регион):\n";
 		client.fillClientData(std::cin);
+	}
 
 	return client;
 }
@@ -261,4 +278,17 @@ std::chrono::year_month_day inputDate() {
 	std::istringstream dateStream(dateInput);
 	dateStream >> day >> delimiter >> month >> delimiter >> year;
 	return std::chrono::year(year) / std::chrono::month(month) / std::chrono::day(day);
+}
+
+int check_file(std::ifstream& file)
+{
+	int res = 1;
+	if (!file)
+	{
+		res = -1;
+	}
+	else
+		if (file.peek() == EOF)
+			res = 0;
+	return res;
 }
